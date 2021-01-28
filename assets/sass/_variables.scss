@@ -178,7 +178,7 @@ $content-headings-anchor: "" !default;
 $content-link-border: 1px solid $theme-color !default;
 
 // Background color of the blockquote.
-$content-blockquote-backgroud: rgba($theme-color, 0.05) !default;
+$content-blockquote-backgroud: #fafafa;
 
 // Border left of the blockquote.
 $content-blockquote-border-left: 3px solid rgba($theme-color, 0.3) !default;
@@ -258,7 +258,7 @@ $code-type-list: (
 ) !default;
 
 // Color of the code background.
-$code-background: $deputy-color !default;
+$code-background: #fafafa;
 
 
 // ========== Pagination ========== //

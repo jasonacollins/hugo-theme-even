@@ -38,13 +38,6 @@
   {{- end }}
 
   <span class="copyright-year">
-    {{- $current := now.Format "2006" }}
-    &copy; 
-    {{ if ne .Site.Params.since $current -}}
-      {{ .Site.Params.since }} - 
-    {{ end }}
-    {{- $current -}}
-    <span class="heart"><i class="iconfont icon-heart"></i></span><!--
-    --><span>{{if .Site.Copyright }}{{ .Site.Copyright | safeHTML }}{{ else }}{{ .Site.Author.name | safeHTML }}{{ end }}</span>
-  </span>
+    <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />
+   </span>
 </div>
