@@ -308,6 +308,9 @@ $archive-post-mobile-time-font-size: 13px !default;
 // Border left of the archive post, use $archive-post-hover-border-left when hover it.
 $archive-post-border-left: 1px solid $gray !default;
 
+// Border bottom of the archive post when hover it.
+$archive-post-title-hover-border-bottom: 1px solid $theme-color !default;
+
 // ========== General Terms ========== //
 // Font size of the terms title.
 $terms-title-size: 18px !default;
