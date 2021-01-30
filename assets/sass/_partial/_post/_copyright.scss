@@ -8,7 +8,7 @@
 
     a {
       color: $theme-color;
-      word-wrap: break-word;
+      word-wrap: normal;
 
       &:hover {
         border-bottom: $content-link-border;

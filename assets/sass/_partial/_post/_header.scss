@@ -20,27 +20,5 @@
       font-size: 15px;
     }
 
-    .post-category {
-      display: inline;
-
-      a {
-        color: inherit;
-
-        &::before {
-          content: '·';
-        }
-
-        &:hover {
-          color: $theme-color;
-        }
-      }
-    }
-
-    .more-meta {
-      &::before {
-        content: '·';
-      }
-    }
-
   }
 }
