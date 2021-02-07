@@ -72,26 +72,6 @@
 {{ $js := slice $even $main | resources.Concat "js/main.js" | minify | fingerprint }}
 <script type="text/javascript" src="{{ $js.RelPermalink }}"></script>
 
-{{- if and (or .Params.mathjax (and .Site.Params.mathjax (ne .Params.mathjax false))) (or .IsPage .IsHome) }}
-  <script type="text/javascript">
-    window.MathJax = {
-      tex: {
-        {{ if or .Params.mathjaxEnableSingleDollar (and .Site.Params.mathjaxEnableSingleDollar (ne .Params.mathjaxEnableSingleDollar false)) -}}
-          inlineMath: [['$','$'], ['\\(','\\)']],
-        {{ end -}}
-        {{ if or .Params.mathjaxEnableAutoNumber (and .Site.Params.mathjaxEnableAutoNumber (ne .Params.mathjaxEnableAutoNumber false)) -}}
-          tags: 'ams',
-        {{ end -}}
-      }
-    };
-  </script>
-  {{ if .Site.Params.mathjaxUseLocalFiles -}}
-    <script type="text/javascript" async src="{{ "lib/mathjax/es5/tex-mml-chtml.js" | relURL }}"></script>
-  {{- else -}}
-    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-mml-chtml.js" integrity="sha256-HGLuEfFcsUJGhvB8cQ8nr0gai9EucOOaIxFw7qxmd+w=" crossorigin="anonymous"></script>
-  {{- end }}
-{{- end }}
-
 <!-- Analytics -->
 {{- if (in (slice (getenv "HUGO_ENV") hugo.Environment) "production") | and .Site.GoogleAnalytics -}}
   {{ template "_internal/google_analytics_async.html" . }}
