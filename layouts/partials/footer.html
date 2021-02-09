@@ -17,7 +17,7 @@
   {{- end }}
 </div>
 
-{{- partial "math.html" . -}}
+{{ if .Params.math }}{{ partial "math.html" . }}{{ end }}
 
 <div class="copyright">
   <span class="power-by">

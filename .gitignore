@@ -6,3 +6,5 @@ exampleSite/resources/
 .DS_Store
 assets/.DS_Store
 layouts/.DS_Store
+.DS_Store
+layouts/.DS_Store
